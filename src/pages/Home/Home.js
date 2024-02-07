@@ -62,45 +62,56 @@ const Home = () => {
           <Link to="/sign-in">Get Started</Link>
         </button>
       </div>
-      <h2 className="prompt-text">About RIO UML</h2>
       <div className="description card-container">
   <div className="card" style={{ pointerEvents: 'none' }}>
+  <h2 className="prompt-text">About RIO UML</h2>
     <p>
       RIO UML is a comprehensive tool designed for software developers and designers to streamline the process of creating UML diagrams and generating code snippets. It offers various features such as automatic generation of user stories, class diagrams, use case diagrams, and code snippets, helping teams to visualize their software architecture and accelerate the development process.
-    </p><div className="row">
-    <div className="col-lg-3 col-md-4 mb-4">
-      <div className="card rounded-circle" style={{ width: '250px', height: '250px'}}>
-        <div className="card-body">
-          <h5 className="card-title">Card 1</h5>
-          <p className="card-text">Content for Card 1.</p>
-        </div>
-      </div>
-    </div>
-    <div className="col-lg-3 col-md-4 mb-4">
-      <div className="card rounded-circle" style={{ width: '250px', height: '250px' }}>
-        <div className="card-body">
-          <h5 className="card-title">Card 2</h5>
-          <p className="card-text">Content for Card 2.</p>
-        </div>
-      </div>
-    </div>
-    <div className="col-lg-3 col-md-4 mb-4">
-      <div className="card rounded-circle" style={{ width: '250px', height: '250px' }}>
-        <div className="card-body">
-          <h5 className="card-title">Card 3</h5>
-          <p className="card-text">Content for Card 3.</p>
-        </div>
-      </div>
-    </div>
-    <div className="col-lg-2 col-md-4 mb-4">
-      <div className="card rounded-circle" style={{ width: '250px', height: '250px' }}>
-        <div className="card-body">
-          <h5 className="card-title">Card 4</h5>
-          <p className="card-text">Content for Card 4.</p>
-        </div>
+    </p>
+    <div className="row justify-content-center" style={{}}>
+  <div className="col-lg-3 col-md-4 mb-4"  style={{ width: '20%' }}>
+    <div className="card" style={{ width: '230px', height: '230px', marginRight:'20px'}}>
+    <img src="https://cdn.dribbble.com/users/571755/screenshots/15241780/media/139ee3b39673f23dc3694490e50f6257.jpg?resize=400x300&vertical=center" className="card-img-top" alt="Card Image" />
+      <div className="card-body">
+        <h5 className="card-title">Accurate</h5>
       </div>
     </div>
   </div>
+  <div className="col-lg-3 col-md-4 mb-4"  style={{ width: '20%' }}>
+    <div className="card" style={{ width: '230px', height: '230px', marginRight:'20px'}}>
+    <img src="https://img.freepik.com/premium-vector/man-red-shirt-is-flying-rocket_220346-8156.jpg" className="card-img-top" alt="Card Image" />
+      <div className="card-body">
+        <h5 className="card-title">Fast</h5>
+      </div>
+    </div>
+  </div>
+  <div className="col-lg-3 col-md-4 mb-4"  style={{ width: '20%' }}>
+    <div className="card" style={{ width: '230px', height: '230px', marginRight:'20px'}}>
+      <div className="card-body">
+      <img src="https://unblast.com/wp-content/uploads/2020/03/Illustrator-Vector-Illustration-1.jpg" className="card-img-top" alt="Card Image" />
+        <h5 className="card-title">Download</h5>
+      </div>
+    </div>
+  </div>
+  <div className="col-lg-3 col-md-4 mb-4"  style={{ width: '20%' }}>
+    <div className="card" style={{ width: '230px', height: '230px', marginRight:'20px'}}>
+      <div className="card-body">
+      <img src="https://img.freepik.com/free-vector/male-programmer-working-computer-office-wall-with-hanging-reminder-stickers-developer-creating-new-software-interface-coding-programming-system-administrator-designer-character_575670-1159.jpg?size=626&ext=jpg&ga=GA1.1.1448711260.1706918400&semt=sph" className="card-img-top" alt="Card Image" />
+        <h5 className="card-title">Edit</h5>
+      </div>
+    </div>
+  </div>
+  <div className="col-lg-3 col-md-4 mb-4"  style={{ width: '20%' }}>
+    <div className="card" style={{ width: '230px', height: '230px', marginRight:'20px'}}>
+      <div className="card-body">
+      <img src="https://img.freepik.com/free-vector/male-programmer-working-computer-office-wall-with-hanging-reminder-stickers-developer-creating-new-software-interface-coding-programming-system-administrator-designer-character_575670-1159.jpg?size=626&ext=jpg&ga=GA1.1.1448711260.1706918400&semt=sph" className="card-img-top" alt="Card Image" />
+        <h5 className="card-title">Easiness</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   </div>
 </div>
 

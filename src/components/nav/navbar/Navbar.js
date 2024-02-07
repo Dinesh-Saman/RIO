@@ -53,21 +53,8 @@ function Navbar() {
                         Contact Us
                     </Link>
                 </div>
-                {isLoggedIn ? (
-                    <div className="profile">
-                        <p className="profile-name">{userData["fname"]}</p>
-                        <div className="profile-circle" onClick={() => setIsAccountBoxOpen(!isAccountBoxOpen)}>
-                            <p className="circle-inner">{userData.fname[0] + userData.lname[0]}</p>
-                        </div>
-                        {isAccountBoxOpen && <AccountBox setLogin={setIsLoggedIn} />}
-                    </div>
-                ) : (
-                    <div className="login">
-                        <Link to="/sign-in" className="nav_items">
-                            Login
-                        </Link>
-                    </div>
-                )}
+
+        
             </div>
         </div>
     );

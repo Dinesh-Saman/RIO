@@ -1,15 +1,14 @@
-import React from "react";
-import { useState, useContext, useRef } from "react";
+import React, { useState, useContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/nav/navbar/Navbar";
 import "./UserInput.css";
 import axios from "axios";
-import Navbar from "../../components/nav/navbar/Navbar"
-import Footer from "../../components/footer/Footer"
 import DiagramMarkdownContext from "../../context/DiagramMarkdownContext";
 import DiagramDictionaryContext from "../../context/DiagramDictionaryContext";
 import Loading from "../../components/alert/Loading";
 import AlertMsg from "../../components/alert/AlertMsg";
-
+import Footer from "../../components/footer/Footer";
+import useCaseImage from "../../images/usecase.avif"; // Import your image
 
 const UserInput = () => {
     const [formData, setFormData] = useState({});
@@ -53,10 +52,22 @@ const UserInput = () => {
         if (formData["userinput-textarea"]) {
             sendDataToServer(formData);
         } else {
-            setErrorMsg("No senarios entered..");
+            setErrorMsg("No scenarios entered..");
             setShowAlert(true);
         }
     };
+
+const handleReset = () => {
+    setFormData({});
+    setText(""); // Clear the text area state
+    // Clear the textarea element
+    const textarea = document.getElementById("textarea");
+    if (textarea) {
+        textarea.value = "";
+    }
+};
+
+
 
     // sending data to server
     function sendDataToServer(data) {
@@ -77,45 +88,62 @@ const UserInput = () => {
             .catch((error) => {
                 console.log(error);
                 setShowLoading(false);
-                setErrorMsg("Paragraph not clear..Pls try a differnt description..");
+                setErrorMsg("Paragraph not clear..Please try a different description..");
                 setShowAlert(true);
             });
     }
 
     return (
         <div>
-            <Navbar />
             {showAlert && <AlertMsg type="warning" text={errorMsg} setShowAlert={setShowAlert} />}
             <div className="main_container">
                 <div className="userInput-container">
                     <h2 className="mb-4">Generate Your Class Diagram</h2>
-
-                    <div className="form-outline">
+                    <div className="textarea-container">
                         <textarea
+                            style={{
+                                backgroundColor: '#EFCEFA',
+                                color:'black',
+                                padding: '30px', // Add padding for spacing
+                                borderRadius: '20px', // Add rounded corners
+                                resize: 'vertical', // Allow vertical resizing
+                                width: '100%', // Set width to fill its container
+                                minHeight: '100px', // Set a minimum height
+                                fontFamily: 'Arial, sans-serif', // Set font family
+                                fontSize: '16px', // Set font size
+                                lineHeight: '1.5', // Set line height
+                            }}
                             name="userinput-textarea"
                             defaultValue={text}
                             onChange={(event) => handleChange(event)}
-                            className="form-control border border-5 rounded"
                             id="textarea"
                             rows="10"
-                            placeholder="Enter your senario.."
-                        ></textarea>
+                            placeholder="Input Your Scenario.."
+                        />
+
+                        <img
+                            className="use-case-image"
+                            src="https://assets-v2.lottiefiles.com/a/8b9e0836-116e-11ee-bad5-e357b16246db/gY7OYGHGU7.gif"
+                            style={{ width: '400px', height: 'auto', marginLeft: '100px'}}
+                        />
                     </div>
                     {showLoading && <Loading msg="Generating Diagram" />}
-
                     <div className="d-flex justify-content-around mt-4">
                         <input type="file" accept=".txt" className="d-none" ref={fileInputField} onChange={(event) => handleFile(event)} />
-                        <button type="button" className="btn btn-success" onClick={() => fileInputField.current.click()}>
-                            <i className="fa fa-file-arrow-up ms-1"></i> import file
+                        <button type="button" className="btn btn-success custom-button" onClick={() => fileInputField.current.click()}>
+                            <i className="fa fa-file-arrow-up ms-1"></i> Import File
                         </button>
-                        <button type="button" className="btn btn-danger" onClick={handleSubmit}>
-                            Generate Diagram
-                            <i className="fas fa-long-arrow-alt-right ms-1"></i>
+                        <button type="button" className="btn btn-secondary custom-button" onClick={handleReset}>
+                            Reset Scenario
                         </button>
+                        <button type="button" className="btn btn-danger custom-button" onClick={handleSubmit}>
+                            Generate Diagram <i className="fas fa-arrow-up ms-1"></i>
+                        </button>
+
                     </div>
+
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

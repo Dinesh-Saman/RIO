@@ -37,13 +37,13 @@ const Download = () => {
     };
 
     return (
-        <div className="main_container">
+   
   
             <div className="card bg-primary text-white d-flex justify-content-between" style={{backgroundImage: `url('https://plus.unsplash.com/premium_photo-1675802520884-45ad9a50c2c9?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4dHVyZXxlbnwwfHwwfHx8MA%3D%3D')`}}>
 
 
                 <div className="card-body">
-                <h2 className="mb-6 mt-12 mb-4 text-blac">Final Output of Your Diagram</h2>
+                <h2 className="mb-6 mt-12 mb-4 text-black">Final Output of Your Diagram</h2>
                     <div className="diagram-container overflow-auto border border-dark border-2 rounded-3">
                         <img src={diagramUrl} alt="generated diagram" className="p-4" />
                     </div>
@@ -66,7 +66,7 @@ const Download = () => {
                 </div>
 
             </div>
-        </div>
+      
     );
 };
 

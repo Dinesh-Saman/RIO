@@ -2,15 +2,15 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 500px; /* Adjust height as needed */
+  height: 500px; 
 }
 
 .image-container img {
-  width: calc(100% - 20px); /* Adjust width and subtract margin size */
-  height: calc(100% - 20px); /* Adjust height and subtract margin size */
-  margin: 10px; /* Add margin around the image */
-  object-fit: cover; /* Ensure the image covers the container */
-  transition: transform 0.5s ease; /* Add smooth transition */
+  width: calc(100% - 20px); 
+  height: calc(100% - 20px); 
+  margin: 10px; 
+  object-fit: cover; 
+  transition: transform 0.5s ease;
 }
 
 .button-prev,
@@ -20,7 +20,7 @@
   transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
-  padding: 30px 20px; /* Increase padding to increase button height */
+  padding: 30px 20px; 
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -39,27 +39,14 @@
   right: 10px;
 }
 
-.button-inside-image {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #26ff00; /* Button background color */
-  padding: 10px 20px; /* Button padding */
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-  color: #333333; /* Button text color */
-  text-decoration: none;
-  transition: background-color 0.3s ease; /* Add transition for button hover effect */
-}
+
 
 .button-inside-image:hover {
-  background-color: #ff9900; /* Change button background color on hover */
+  background-color: #ff9900; 
 }
 
 .button-inside-image a {
-  color: inherit; /* Inherit button text color */
+  color: inherit; 
   text-decoration: none;
 }
 
@@ -69,7 +56,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for footer */
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   text-align: center;
 }
@@ -77,7 +64,7 @@
 .footer p {
   margin: 0;
   font-size: 14px;
-  color: #666666; /* Footer text color */
+  color: #666666;
 }
 
 .circle-container {
@@ -111,7 +98,7 @@
 .card-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin: 35px;
 }
 
 .card {
@@ -120,10 +107,16 @@
   padding: 20px;
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease;
 }
+
+.card:hover {
+  transform: scale(1.1); /* Adjust the scale factor as needed */
+  cursor: pointer;
+}
+
 
 .card img {
   max-width: 100%;
@@ -135,21 +128,34 @@
 .card h3 {
   font-size: 24px;
   margin: 10px 0;
-  color: #333;
+  color: #ceb8b8;
   font-family: "Roboto", sans-serif;
 }
 
+.card h6 {
+  font-size: 24px;
+  color: #444040;
+  font-family: "calibri";
+  font-weight: 500;
+}
+
+
 .card p {
   font-size: 16px;
-  color: #666;
+  color: #000000;
   font-family: "Arial", sans-serif;
   line-height: 1.6;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+  transform: scale(1.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease; /* Add smooth transition */
+  cursor: pointer; 
 }
+
+
+
 
 .card description:hover {
   cursor: pointer;
@@ -158,8 +164,6 @@
 .description_card {
   cursor: pointer;
 }
-
-/* Home.css */
 
 .description {
   font-size: 18px;
@@ -183,10 +187,17 @@
 }
 
 .footer a {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit text color */
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .footer a:hover {
-  color: inherit; /* Change color on hover */
+  color: inherit; 
 }
+
+.link-style {
+  text-decoration: none;
+  color: inherit; 
+}
+
+
