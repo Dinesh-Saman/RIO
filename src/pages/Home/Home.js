@@ -63,7 +63,7 @@ const Home = () => {
         </button>
       </div>
       <div className="description card-container">
-  <div className="card" style={{ pointerEvents: 'none' }}>
+  <div className="card" style={{ pointerEvents: 'none', backgroundColor:"cyan" }}>
   <h2 className="prompt-text">About RIO UML</h2>
     <p>
       RIO UML is a comprehensive tool designed for software developers and designers to streamline the process of creating UML diagrams and generating code snippets. It offers various features such as automatic generation of user stories, class diagrams, use case diagrams, and code snippets, helping teams to visualize their software architecture and accelerate the development process.
@@ -105,7 +105,7 @@ const Home = () => {
     <div className="card" style={{ width: '230px', height: '230px', marginRight:'20px'}}>
       <div className="card-body">
       <img src="https://img.freepik.com/free-vector/male-programmer-working-computer-office-wall-with-hanging-reminder-stickers-developer-creating-new-software-interface-coding-programming-system-administrator-designer-character_575670-1159.jpg?size=626&ext=jpg&ga=GA1.1.1448711260.1706918400&semt=sph" className="card-img-top" alt="Card Image" />
-        <h5 className="card-title">Easiness</h5>
+        <h5 className="card-title">Easy</h5>
       </div>
     </div>
   </div>
@@ -119,27 +119,35 @@ const Home = () => {
       <div className="card-container">
         {/* Card 1 */}
         <div className="card">
+          <Link to="./userRequirment" style={{textDecoration:'none'}}>
           <img src={Image4} alt="Card 1" />
           <h3>RIO User Story</h3>
-          <p>Automatically generate user stories for your projects with RIO User Story.</p>
+          <p>Automatically generate user stories for your projects with RIO User Story.</p>  
+          </Link>
         </div>
         {/* Card 2 */}
         <div className="card">
+        <Link to="./classDiagram" style={{textDecoration:'none'}}>
           <img src={Image2} alt="Card 2" />
           <h3>RIO Class Diagram</h3>
           <p>Generate class diagrams effortlessly using RIO Class Diagram.</p>
+          </Link>
         </div>
         {/* Card 3 */}
         <div className="card">
+        <Link to="./userRequirment" style={{textDecoration:'none'}}>
           <img src={Image1} alt="Card 3" />
           <h3>RIO Use Case Diagram</h3>
           <p>Automatically generate use case diagrams with RIO Use Case Diagram.</p>
+          </Link>
         </div>
         {/* Card 4 */}
         <div className="card">
+        <Link to="./userRequirment" style={{textDecoration:'none'}}>
           <img src={Image3} alt="Card 4" />
           <h3>RIO Code Generator</h3>
           <p>Generate code snippets quickly and efficiently using RIO Code Generator.</p>
+          </Link>
         </div>
       </div>
     </div>
