@@ -40,6 +40,7 @@ const Edit = () => {
                 dataArray.push({ actor: actor, usecases: dictionary[actor] });
             }
         }
+        console.log(dataArray)
         return dataArray;
     };
 
@@ -70,7 +71,6 @@ const Edit = () => {
 
     return (
         <div>
-            <Navbar />
             {showAlert && <AlertMsg type="warning" text="Error occured.. pls try again.." setShowAlert={setShowAlert} />}
             <div className="main_container">
                 <h2>Edit your diagram</h2>
@@ -138,8 +138,6 @@ const Edit = () => {
                     </div>
                 </div>
             </div>
-
-            <Footer />
         </div>
     );
 };
