@@ -48,16 +48,11 @@ const Download = () => {
                         <img src={diagramUrl} alt="generated diagram" className="p-4" />
                     </div>
                     <div className="d-flex justify-content-around mt-4">
-                    <Link to="/userRequirment">
+                    <Link to="/classDiagram">
                         <button type="button" className="btn btn-secondary custom-btn">
                             <i class="fa-solid fa-pen-to-square"></i> Generate Another Diagram
                         </button>
                     </Link>    
-                    <Link to="/edit">
-                        <button type="button" className="btn btn-success custom-btn">
-                            <i class="fa-solid fa-pen-to-square"></i> Edit
-                        </button>
-                    </Link>
                     <button type="button" className="btn btn-danger custom-btn" onClick={handleDownload}>
                         <i class="fa-regular fa-circle-down"></i> Download
                     </button>

@@ -52,11 +52,6 @@ const Download = () => {
                     </div>
 
                     <div className="d-flex justify-content-around mt-4">
-                        <Link to="/edit">
-                            <button type="button" className="btn btn-success">
-                                <i class="fa-solid fa-pen-to-square"></i> Edit
-                            </button>
-                        </Link>
                         <button type="button" className="btn btn-danger" onClick={handleDownload}>
                             <i class="fa-regular fa-circle-down"></i> Download
                         </button>
